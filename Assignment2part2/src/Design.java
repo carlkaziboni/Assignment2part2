@@ -24,13 +24,13 @@ public class Design {
     private static final double TAX_RATE_THREE = 0.45;
     public static void main(String[] args)
     {
-        int totalincome = 0;
+        int totalIncome = 0;
         //Get input from user
         String input = GetNumerical.getIncome();
         //make sure input is integer
         try
         {
-            totalincome = Integer.parseInt(input);
+            totalIncome = Integer.parseInt(input);
         }
         catch (NumberFormatException exception)
         {
@@ -39,38 +39,38 @@ public class Design {
         }
         finally
         {
-            System.out.println("Income: " + totalincome);
+            System.out.println("Income: " + totalIncome);
         }
 
         //start calculating tax
         int tax = 0;
         //Non-taxable income
-        if (totalincome <= PERSONAL_ALLOWANCE)
+        if (totalIncome <= PERSONAL_ALLOWANCE)
         {
             printTax(tax);
         }
         //First 37700 after personal allowance taxed at 20%
-        else if (totalincome <= (PERSONAL_ALLOWANCE + BAND_ONE))
+        else if (totalIncome <= (PERSONAL_ALLOWANCE + BAND_ONE))
         {
-            tax = calculateBandOne(totalincome);
+            tax = calculateBandOne(totalIncome);
             printTax(tax);
         }
         //First 37700 after personal allowance taxed at 20% then rest of income up to 100000 taxed at 40%
-        else if (totalincome <= BAND_THREE)
+        else if (totalIncome <= BAND_THREE)
         {
-            tax = calculateBandTwo(totalincome);
+            tax = calculateBandTwo(totalIncome);
             printTax(tax);
         }
         //First 37700 after personal allowance taxed then rest of income taxed at 40% however after 100000 every 2 pound reduced personal allowance by 1 pound
-        else if (totalincome <= BAND_FOUR)
+        else if (totalIncome <= BAND_FOUR)
         {
-            tax = calculateBandThree(totalincome);
+            tax = calculateBandThree(totalIncome);
             printTax(tax);
         }
         //First 37700 taxed at 20% then next 99730 taxed at 40% then rest of income taxed 45%
-        else if (totalincome > BAND_FOUR)
+        else if (totalIncome > BAND_FOUR)
         {
-            tax = calculateBandFour(totalincome);
+            tax = calculateBandFour(totalIncome);
             printTax(tax);
         }
         //If all checks were bypassed
