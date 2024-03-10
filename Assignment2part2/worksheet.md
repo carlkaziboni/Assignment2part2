@@ -39,22 +39,21 @@ On completion the student should be able to:
 Ka-Ching! That is the sweet sound of the government cashing way part of your income. Have you always wondered how those pesky taxes are calculated. Do have a passion for programming? Well Calculate My Income Tax is perfect for you. Together we are going to level up your Java programming skills and all the while learning about legal robbery (oops I meant taxes). Throughout this worksheet we will learn to apply various skills you have learned and add a few more.
 
 # Table of Contents #
-- [Algorithm](#algorithm)
-  - [Diagram](#diagram)
-  - [Description](#description)
-  - [Pseudocode](#pseudocode)
-- [Review Questions](#revision-questions)
-- [Glossary](#glossary)
-- [Revision Questions](#revision-questions)
-- [Further Reading](#further-reading)
+- [Algorithm](#algorithm-)
+  - [Diagram](#diagram-)
+  - [Description](#description-)
+  - [Pseudocode](#pseudocode-)
+- [Revision Questions](#revision-questions-)
+- [Glossary](#glossary-)
+- [Further Reading](#further-reading-)
 
 ## Algorithm ##
 Let's get started! This section is divided into two parts, an easy to read description with a few Java technical terms (Don't worry we've provided a glossary for you to reference at any time, all underlined words are in the glossary) and a pseudocode section so you can really get a feel for the algorithm. There are also a few examples to help you out.  
-[Back to Table of Contents](#table-of-contents)
+[Back to Table of Contents](#table-of-contents-)
 
 ### Diagram ###
 ![Diagram of algorithm](/diagram.jpg "Figure 1: Flow chart of input validation algorithm. Figure 2: Table of incorrect and correct inputs. Figure 3: Flow chart of tax calculation algorithm. Figure 4: Table of inputs and expected outputs for tax.")
-[Back to Table of Contents](#table-of-contents)
+[Back to Table of Contents](#table-of-contents-)
 
 - ### Description ###
   - Step 1: To get the user's income, otherwise how else would you calculate taxes. We're going to use via a special helper *method*<sup>[3](#3)</sup> called `getIncome` located in our `GetNumerical` class. Firstly we need `import java.util.Scanner;` .In order to get input from the user we say `Scanner incomeInput = new Scanner(System.in);`. I know this seems like a lot but we're going to break it down together. You already know the basics of classes and objects, this is exactly the same however this time we specify *`System.in`*<sup>[5](#5)</sup> in order to tell `Scanner` we are getting input from the *console*<sup>[2](#2)</sup>. Easy, right?! Now onto the next step!
@@ -70,7 +69,7 @@ Let's get started! This section is divided into two parts, an easy to read descr
   All that's left to do is print out the tax using `printTax` which is a simple function that prints out 'Tax: [resulting incomce]' (See Figure 3 and Figure 4).
 
   - CONGRATULATIONS!!! You have calculated income tax, this algorithm should be helpful for all your adult working life time to come. We hope this description helped you gain more confidence with your programming.  
-[Back to Table of Contents](#table-of-contents)
+[Back to Table of Contents](#table-of-contents-)
 ### Pseudocode ###
   1. Get user's income
   2. While (invalid income input)  
@@ -96,7 +95,7 @@ Let's get started! This section is divided into two parts, an easy to read descr
          printTax(tax)  
      else  
          print(Input wrongly formatted)  
-[Back to Table of Contents](#table-of-contents)
+[Back to Table of Contents](#table-of-contents-)
 
 ## Revision Questions ##
 1. What class did we use to get user input? a: Scanner.
@@ -106,7 +105,7 @@ Let's get started! This section is divided into two parts, an easy to read descr
 5. What method did we use to Parse to an integer? a: parseInt().
 6. How did we print an error?a: System.err.print().
 7. How many cases did we have?a: 5.  
-[Back to Table of Contents](#table-of-contents)
+[Back to Table of Contents](#table-of-contents-)
 
 ## Glossary ##
 
@@ -120,13 +119,13 @@ Let's get started! This section is divided into two parts, an easy to read descr
 | <a id="7"></a>Type casting | The process of converting one data type to another |
 | <a id="8"></a>Parsing | Parsing is the process of converting data from one format to another, often involving the interpretation of a sequence of symbols |  
 
-[Back to Table of Contents](#table-of-contents)
+[Back to Table of Contents](#table-of-contents-)
 
 ## Further Reading ##
 - [Java Documentation](https://docs.oracle.com/en/java/javase/21/docs/api/index.html "Link to Java Documentation")
 - [Edinburgh University Inf1B](https://opencourse.inf.ed.ac.uk/inf1b/ "Link to INF1B webpage")
 
-[Back to Table of Contents](#table-of-contents)
+[Back to Table of Contents](#table-of-contents-)
 
 
 # Original challenge question from CodeGolf #
