@@ -6,9 +6,23 @@
 
 # Calculate My Income Tax #
 
+# Table of Contents #
+- [Target Audience](#target-audience-)
+- [Prerequisite knowledge](#prerequisite-knowledge-)
+- [Learning Outcomes](#prerequisite-knowledge-)
+- [Introduction](#introduction-)
+- [Algorithm](#algorithm-)
+  - [Diagram](#diagram-)
+  - [Description](#description-)
+  - [Pseudocode](#pseudocode-)
+- [Revision Questions](#revision-questions-)
+- [Glossary](#glossary-)
+- [Further Reading](#further-reading-)
+
 # Target audience #
 
-*Beginners* in Object Oriented Programming and Java taking INF1B. They must have a few weeks of Object-Oriented Programming experience in Java.
+*Beginners* in Object Oriented Programming and Java taking INF1B. They must have a few weeks of Object-Oriented Programming experience in Java.  
+[Back to Table of Contents](#table-of-contents-)
 
 # Prerequisite knowledge #
 
@@ -23,6 +37,8 @@
 </ul>
 
   > The elements in the list are needed specifically in Java. *Enhanced for loops*<sup>[6](#6)</sup> are not needed for this assignment.
+  
+[Back to Table of Contents](#table-of-contents-)
 
 # Learning outcomes #
 On completion the student should be able to:
@@ -34,18 +50,12 @@ On completion the student should be able to:
 5. Effectively use loops
 6. *Type cast*<sup>[7](#7)</sup> and *parse*<sup>[8](#8)</sup>
 
+[Back to Table of Contents](#table-of-contents-)
+
 # Introduction #
 
-Ka-Ching! That is the sweet sound of the government cashing way part of your income. Have you always wondered how those pesky taxes are calculated. Do have a passion for programming? Well Calculate My Income Tax is perfect for you. Together we are going to level up your Java programming skills and all the while learning about legal robbery (oops I meant taxes). Throughout this worksheet we will learn to apply various skills you have learned and add a few more.
-
-# Table of Contents #
-- [Algorithm](#algorithm-)
-  - [Diagram](#diagram-)
-  - [Description](#description-)
-  - [Pseudocode](#pseudocode-)
-- [Revision Questions](#revision-questions-)
-- [Glossary](#glossary-)
-- [Further Reading](#further-reading-)
+Ka-Ching! That is the sweet sound of the government cashing away part of your income. Have you always wondered how those pesky taxes are calculated. Do have a passion for programming? Well Calculate My Income Tax is perfect for you. Together we are going to level up your Java programming skills and all the while learning about legal robbery (oops I meant taxes). Throughout this worksheet we will learn to apply various skills you have learned and add a few more.  
+[Back to Table of Contents](#table-of-contents-)
 
 ## Algorithm ##
 Let's get started! This section is divided into two parts, an easy to read description with a few Java technical terms (Don't worry we've provided a glossary for you to reference at any time, all underlined words are in the glossary) and a pseudocode section so you can really get a feel for the algorithm. There are also a few examples to help you out.  
