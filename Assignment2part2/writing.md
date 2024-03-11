@@ -31,10 +31,10 @@ The actual questions are in
 # 2: Favourite mistake #
 
 ### Outline ###
-- Not having all necessesary sections in the worksheet, i.e. Introduction, Table of Contents etc. In the second part of this assignment I have actively seeked to not repeat this mistake.
+- Not having all necessary sections in the worksheet, i.e. Introduction, Table of Contents etc. In the second part of this assignment I have actively sought to not repeat this mistake.
 
-### Explaination ###
-- This mistake showed me that I needed to have more structre in my writing, not just in the worksheet but in the entire assignment, i.e Design.Java, Acknowledgements and Writing. Having a structure allowed me to streamline my work and only put what was necessary. Having sections in the worksheet also helped me 'modularize' the worksheet. This allowed it to be easier for a beginner to follow and split what was a big daunting worksheet before to a manageable and easier to follow worksheet.
+### Explanation ###
+- This mistake showed me that I needed to have more structure in my writing, not just in the worksheet but in the entire assignment, i.e Design.Java, Acknowledgements and Writing. Having a structure allowed me to streamline my work and only put what was necessary. Having sections in the worksheet also helped me 'modularize' the worksheet. This allowed it to be easier for a beginner to follow and split what was a big daunting worksheet before to a manageable and easier to follow worksheet.
 
 # 3: Helping previous you #
 ### Advice ###
@@ -44,7 +44,7 @@ The actual questions are in
 
 ### Justification ###
 1. Not all work comes out to be perfect the first time it is done. Revising work is paramount. Mistakes are spotted and improvements are made during the review process. Reviewing your work is the difference between mediocre work and exceptional work. It also shows the time, care and effort placed in the work. It will also give you a sense of pride in what you have accomplished when you know it's done right.
-2. Splitting your code into small bitesize tasks is a lot easier than trying to swallow it whole. It makes debugging easier and makes testing much easier and running unit tests easier. You know exactly where things have gone wrong if a test fails. It is also just easier to make changes to your code in the future.
+2. Splitting your code into small bite size tasks is a lot easier than trying to swallow it whole. It makes debugging easier and makes testing much easier and running unit tests easier. You know exactly where things have gone wrong if a test fails. It is also just easier to make changes to your code in the future.
 3. Take advantage of all the great features that markdown has, it makes things so much easier to read and orders your work a lot better. Styling also makes it more accessible. There are also a number of appropriate tools to use for circumstances, i.e. the table in acknowledgements. Trying to do this task in any other way would have come up as untidy.
 
 # 4: Helping future you #
@@ -53,7 +53,7 @@ The actual questions are in
 - Working with a team in a startup, designing and e-commerce web application.
 ### Markdown ###
 - Writing down markdowns provides a clear way to explain what your program does in an easy to read format specific to your program. This allows members joining the startup to easily integrate into the team and get up to speed with what is going on. It also allows members of the team to communicate effectively with each other.
-### Accessiblity ###
+### Accessibility ###
 - Making the web application accessible to all people. It also allows the team to be diverse with people from various backgrounds to be able to contribute effectively to the startup.
 ### Engineering Requirements ###
 - This allows the team to clearly outline what must be done and not be done. This also allows the team to prioritize, with what must be done being done first, what may be done second and what must not be done will not be on the priority list. It also allows the team to establish what a bad product would be, in order to avoid it and what a good product would be in order to achieve it.
@@ -68,7 +68,7 @@ The actual questions are in
 6. Review work at the end.
 7. Ask friends and classmates to review worksheet to see if understandable.
 ### Level of Work ###
-- I feel like my work is above an A2 Level of work. I used mulitple skills to a high level in each part of my assignment, i.e. part of my Javadoc used examples to show how the function worked, my markdown used a lot of extended syntax like footnotes and some custom styling added in it. The worksheet is engaging through humor and easy to understand. Its clarity and engagement would make it attractive to students.
+- I feel like my work is above an A2 Level of work. I used multiple skills to a high level in each part of my assignment, i.e. part of my Javadoc used examples to show how the function worked, my markdown used a lot of extended syntax like footnotes and some custom styling added in it. The worksheet is engaging through humor and easy to understand. Its clarity and engagement would make it attractive to students.
 ### Usefulness ###
 - The use of examples, diagrams, and pseudocode enhances the overall understanding. The glossary and references add value by providing resources for deeper exploration. The footnotes make it easy to navigate to the glossary and search up definitions in the table. The questions at the end make the worksheet more engaging and reinforce the key concepts learnt.
 <STYLE>
