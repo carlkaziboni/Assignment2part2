@@ -109,56 +109,56 @@ public class Design {
      * <p>
      * This method calculates the tax for salaries in band one
      * </p>
-     * @param totalincome An integer of total income
+     * @param totalIncome An integer of total income
      * @return tax calculated
      */
-    private static int calculateBandOne(int totalincome)
+    private static int calculateBandOne(int totalIncome)
     {
         int tax;
         //Calculate tax at 20%  for first 37700 after personal allowance 
-        tax = (int) ((totalincome - PERSONAL_ALLOWANCE) * TAX_RATE_ONE);
+        tax = (int) ((totalIncome - PERSONAL_ALLOWANCE) * TAX_RATE_ONE);
         return tax;
     }
     /**
      * <p>
-     * This method caclulates the tax for salaries in band two
+     * This method calculates the tax for salaries in band two
      * </p>
-     * @param totalincome An integer of total income
+     * @param totalIncome An integer of total income
      * @return tax calculated
      */
-    private static int calculateBandTwo(int totalincome)
+    private static int calculateBandTwo(int totalIncome)
     {
         int tax;
         //Calculate tax at 20% for first 37700 after personal allowance and remainder (as long as below or equal to 100000) at 40%.
-        tax = (int) ((BAND_ONE * TAX_RATE_ONE) + ((totalincome - (PERSONAL_ALLOWANCE + BAND_ONE)) * TAX_RATE_TWO));
+        tax = (int) ((BAND_ONE * TAX_RATE_ONE) + ((totalIncome - (PERSONAL_ALLOWANCE + BAND_ONE)) * TAX_RATE_TWO));
         return tax;
     }
     /**
      * <p>
      * This method calculates the tax for salaries in band three
      * </p>
-     * @param totalincome An integer of total income
+     * @param totalIncome An integer of total income
      * @return tax calculated
      */
-    private static int calculateBandThree(int totalincome)
+    private static int calculateBandThree(int totalIncome)
     {
         int tax;
         //Calculate tax at 20% for first 37700 after personal allowance and next 99730 at 40%. For every 2 pounds over 100000 1 pound is taken from personal allowance.
-        tax = (int) ((BAND_ONE * TAX_RATE_ONE) + ((totalincome - (BAND_ONE + (PERSONAL_ALLOWANCE - ((totalincome - BAND_THREE) / 2)))) * TAX_RATE_TWO));
+        tax = (int) ((BAND_ONE * TAX_RATE_ONE) + ((totalIncome - (BAND_ONE + (PERSONAL_ALLOWANCE - ((totalIncome - BAND_THREE) / 2)))) * TAX_RATE_TWO));
         return tax;
     }
     /**
      * <p>
      * This method calculates the tax for salaries in band four
      * </p>
-     * @param totalincome An integer of total income
+     * @param totalIncome An integer of total income
      * @return tax calculated
      */
-    private static int calculateBandFour(int totalincome)
+    private static int calculateBandFour(int totalIncome)
     {
         int tax;
         //Calculate tax at 20% for first 37700 and next 99730 at 40% and the rest of income at 45%.
-        tax = (int) ((BAND_ONE * TAX_RATE_ONE) + (BAND_TWO * TAX_RATE_TWO) + ((totalincome - (BAND_ONE + BAND_TWO)) * TAX_RATE_THREE));
+        tax = (int) ((BAND_ONE * TAX_RATE_ONE) + (BAND_TWO * TAX_RATE_TWO) + ((totalIncome - (BAND_ONE + BAND_TWO)) * TAX_RATE_THREE));
         return tax;
     }
 }
