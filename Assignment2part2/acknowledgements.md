@@ -36,6 +36,8 @@
 | [Github Markdown Cheatsheet](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax "Link To Github markdown cheatsheat") | Markdown | Showed basic markdown syntax |
 | [Markdown Documentation](https://www.markdownguide.org/)                                                                                                                                                              | Markdown | Show how to write more advanced markdown |
 | [Java Documentation](https://docs.oracle.com/en/java/javase/21/docs/api/index.html "Link to Java Documentation")                                                                                                      | Code | Find functions for various uses in Design.Java |
+| [IntelliJ Markdown Documentation](https://www.jetbrains.com/help/idea/markdown.html "Link to IntelliJ Markdown Documentation") | Markdown | Extra markdown features specific to IntelliJ |
+| INF1B Code Quality Document | Code | Showed how to write good code |
 
 <STYLE>
 * {
