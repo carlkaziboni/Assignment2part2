@@ -9,7 +9,7 @@
 # Table of Contents #
 - [Target Audience](#target-audience-)
 - [Prerequisite knowledge](#prerequisite-knowledge-)
-- [Learning Outcomes](#prerequisite-knowledge-)
+- [Learning Outcomes](#learning-outcomes-)
 - [Introduction](#introduction-)
 - [Algorithm](#algorithm-)
   - [Diagram](#diagram-)
@@ -26,6 +26,16 @@
 
 # Prerequisite knowledge #
 
+```mermaid
+graph TD;
+  Prerequisite_knowledge-->Variables;
+  Prerequisite_knowledge-->Conditionals;
+  Prerequisite_knowledge-->Loops;
+  Prerequisite_knowledge-->Arrays;
+  Prerequisite_knowledge-->Functions;
+  Prerequisite_knowledge-->Basics_of_Classes_and_Objects;
+```
+
 [comment]: <> (Different for list-style-type needed)
 <ul class ="custom">
 <li>Variables</li>
@@ -37,10 +47,18 @@
 </ul>
 
   > The elements in the list are needed specifically in Java. *Enhanced for loops*<sup>[6](#6)</sup> are not needed for this assignment.
-  
 [Back to Table of Contents](#table-of-contents-)
 
 # Learning outcomes #
+```mermaid
+graph TD;
+  Learning_Outcomes-->Scanner_class;
+  Learning_Outcomes-->Handle_errors;
+  Learning_Outcomes-->Handle_input_Strings;
+  Learning_Outcomes-->Conditionals;
+  Learning_Outcomes-->Loops;
+  Learning_Outcomes-->Type_cast_and_parse;
+```
 On completion the student should be able to:
 
 1. Use Scanner class and read from 
@@ -67,16 +85,109 @@ Let's get started! This section is divided into two parts, an easy to read descr
 
 - ### Description ###
   - Step 1: To get the user's income, otherwise how else would you calculate taxes. We're going to use via a special helper *method*<sup>[3](#3)</sup> called `getIncome` located in our `GetNumerical` class. Firstly we need `import java.util.Scanner;` .In order to get input from the user we say `Scanner incomeInput = new Scanner(System.in);`. I know this seems like a lot but we're going to break it down together. You already know the basics of classes and objects, this is exactly the same however this time we specify *`System.in`*<sup>[5](#5)</sup> in order to tell `Scanner` we are getting input from the *console*<sup>[2](#2)</sup>. Easy, right?! Now onto the next step!
-  - Step 2: We already know how get input from the user but how do we get the goodies of what's inside the input. We're going to use `nextLine()` to help us. `income = incomeInput.nextLine();` reads (this is how we talk about getting the goodies) the user input and assigns it to `income`.
+  - Step 2: We already know how get input from the user but how do we get the goodies of what's inside the input. We're going to use `nextLine()` to help us. `income = incomeInput.nextLine();` reads (this is how we talk about getting the goodies) the user input and assigns it to `income`.  
+  ```java
+  System.out.print("Enter whole positive number income: ");
+  Scanner incomeInput = new Scanner(System.in);
+  //read input obtained
+  String income = incomeInput.nextLine();
+  ```
   - Step 3: Check whether the input is valid, I mean no one earns 'three dogs and cat' and we don't want input like that. For this task we're going to keep it simple and only accept positive whole numbers from the user. We're going to use old friends of ours to help us achieve this. FOR and WHILE Loops! I know exciting right. So, we begin with a `while` loop and we're going to use variables `isEmpty` to check if our input is empty and `allNumerical` to check if input is all digits.  Now we say `while (!isEmpty || !allNumerical)` to run the loop while both boolean variables are false. We will need to `import java.util.String;`.  
-  To check if `income` is empty, ironically, we say `income.isEmpty()`. It's almost like coding in English. Now if `income` is empty we ask again for and input in the correct form. If `income` isn't empty we run our second check. Here comes in the `for` loop. We iterate over the *string*<sup>[4](#4)</sup> and check if every character is a digit, and we do this with, you can guess it, another helped *method*<sup>[3](#3)</sup>. We need to `import java.util.Character`. We check if every character is a digit by another almost English sounding *method*<sup>[3](#3)</sup> called `isDigit`. To index a *string*<sup>[4](#4)</sup> we use another helper function called `charAt` i.e `income.charAt[i]`. To check if a character is a digit we say `Character.isDigit(income.charAt(i))`, if the character is a digit we continue checking till `allNumerical` is True, if not we break from the loop and ask for the input again. Great we have checked obtained and checked our input and returned the input as a `String`! (See Figure 1 and Figure 2).
+  To check if `income` is empty, ironically, we say `income.isEmpty()`. It's almost like coding in English. Now if `income` is empty we ask again for and input in the correct form. If `income` isn't empty we run our second check. Here comes in the `for` loop. We iterate over the *string*<sup>[4](#4)</sup> and check if every character is a digit, and we do this with, you can guess it, another helped *method*<sup>[3](#3)</sup>. We need to `import java.util.Character`. We check if every character is a digit by another almost English sounding *method*<sup>[3](#3)</sup> called `isDigit`. To index a *string*<sup>[4](#4)</sup> we use another helper function called `charAt` i.e `income.charAt[i]`. To check if a character is a digit we say `Character.isDigit(income.charAt(i))`, if the character is a digit we continue checking till `allNumerical` is True, if not we break from the loop and ask for the input again. Great we have checked obtained and checked our input and returned the input as a `String`! (See Figure 1 and Figure 2).  
+  ```java
+  //Keep prompting for input till input is correctly given
+        while(!notEmptyInput || !allNumericalInput)
+        {
+            notEmptyInput = false;
+            allNumericalInput = false;
+            if (!income.isEmpty())
+            {
+                notEmptyInput = true;
+
+                for (int i = 0; i < income.length(); i++)
+                {
+                    if (!Character.isDigit(income.charAt(i)))
+                    {
+                        notEmptyInput = false;
+                        break;
+                    }
+                    allNumericalInput = true;
+                }
+            }
+            //all constraints satisfied
+            if (notEmptyInput && allNumericalInput)
+            {
+                break;
+            }
+            System.out.print("Please enter income in correct form (Whole positive number): ");
+            incomeInput = new Scanner(System.in);
+            income = incomeInput.nextLine();
+        }
+  ```
   - Step 4: Now we turn our eyes to the main function, where all the magic happens. We take our input from the user and assign it to `income`. However before we can make any calculations using we need to change the *string*<sup>[4](#4)</sup> to an integer. To do this we *parse*<sup>[8](#8)</sup> income to an integer using the `parseInt` after we `import java.util.Integer;`. However, sometimes there may be an error with what we give `parseInt`. When we have an error the *method*<sup>[3](#3)</sup> will throw an exception, tell us the error but will crash the program. We need to handle these errors gracefully. We will use `try {} catch () {} finally {}`.  
   Between the `try` curly braces we will place in our `totalIncome = Integer.parseInt(income);`. This lets us try out some code first, see more English like terms.  
   The error we specifically want to 'catch', see coding is definitely a sport, from our *method*<sup>[3](#3)</sup> is called `NumberFormatException`, these are often shown in the Java Documentation. So we say `catch (NumberFormatException exception)` and between the curly braces we specify what we want to do. In our case we are going to give our user a nice note about what's wrong with their input and an example of what is the correct input. You probably already know about `System.out.printf` but in our case we will use a slightly different variant called `System.err.printf` to print out the error. And now we **gracefully** exit the program using `System.exit(1)`  
-  In our `finally` section, this code will always be implemented, so between our curly braces we will just print out our income. Now we've handled some errors, see everything is easier broken down into small steps.
+  In our `finally` section, this code will always be implemented, so between our curly braces we will just print out our income. Now we've handled some errors, see everything is easier broken down into small steps.  
+  ```java
+  int totalIncome = 0;
+  //Get input from user
+  String input = GetNumerical.getIncome();
+  //make sure input is integer
+  try
+  {
+    totalIncome = Integer.parseInt(input);
+  }
+  catch (NumberFormatException exception)
+  {
+    System.err.printf("%s not positive whole number i.e. '5000'%n", input);
+    System.exit(1);
+  }
+  finally
+  {
+    System.out.println("Income: " + totalIncome);
+  }
+  ```
   - Step 5: This is really where the fun begins, the moment we've been waiting for. IT'S TIME TO CALCULATE TAXES!! We know, no one is ever this excited for taxes but we are. First question we need to ask ourselves, what tax bracket are we? So we need to make conditionals of what tax bracket we're in, you know those `if` and `else if` things. Using if-else-if-else statements makes it easy to follow along and ensures we cover all edge cases. There are 5 cases, below 12570 (Personal Allowance), above 12570 and below 50270, above 50270 and below 100000, above 100000 and below 125140 and above 200000. We then have an `else` in case we have an unexpected input that passes all the checks but is not valid, this is all done in the id of robustness.  
   We're almost done calculating our tax, just a few small things. All the functions to calculate tax are found at the bottom of `Design` just to keep the code cleaner. They are named `calculateBandOne` to `calculateBandFour` (no case is need for below 12570 as `tax` is initialized to 0) and they apply the formulas (the specifics are not important) for calculating tax and all return an integer. However, we use 0.2 for example in our calculations which is a double, so we have what is called a type mismatch between what we return and calculated. To fix this we change our resulting `tax` to an integer by *casting*<sup>[7](#7)</sup>. We type cast like this, `tax = (int) ((totalincome - PERSONAL_ALLOWANCE) * TAX_RATE_ONE);`, the `(int)` makes sure we assign an integer to tax.  
-  All that's left to do is print out the tax using `printTax` which is a simple function that prints out 'Tax: [resulting income]' (See Figure 3 and Figure 4).
+  All that's left to do is print out the tax using `printTax` which is a simple function that prints out 'Tax: [resulting income]' (See Figure 3 and Figure 4).  
+```java
+//start calculating tax
+int tax = 0;
+//Non-taxable income
+if (totalIncome <= PERSONAL_ALLOWANCE)
+{
+    printTax(tax);
+}
+//First 37700 after personal allowance taxed at 20%
+else if (totalIncome <= (PERSONAL_ALLOWANCE + BAND_ONE))
+{
+    tax = calculateBandOne(totalIncome);
+    printTax(tax);
+}
+//First 37700 after personal allowance taxed at 20% then rest of income up to 100000 taxed at 40%
+else if (totalIncome <= BAND_THREE)
+{
+    tax = calculateBandTwo(totalIncome);
+    printTax(tax);
+}
+//First 37700 after personal allowance taxed then rest of income taxed at 40% however after 100000 every 2 pound reduced persoallowance by 1 pound
+else if (totalIncome <= BAND_FOUR)
+{
+    tax = calculateBandThree(totalIncome);
+    printTax(tax);
+}
+//First 37700 taxed at 20% then next 99730 taxed at 40% then rest of income taxed 45%
+else if (totalIncome > BAND_FOUR)
+{
+    tax = calculateBandFour(totalIncome);
+    printTax(tax);
+}
+//If all checks were bypassed
+else
+{
+    System.out.println("Inappropriate format for income");
+}
+```
 
   - CONGRATULATIONS!!! You have calculated income tax, this algorithm should be helpful for all your adult working life time to come. We hope this description helped you gain more confidence with your programming.  
 [Back to Table of Contents](#table-of-contents-)

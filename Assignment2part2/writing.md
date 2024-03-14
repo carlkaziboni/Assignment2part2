@@ -60,6 +60,21 @@ The actual questions are in
 
 # 5: You be the judge #
 ### Effective Steps to Complete Assignment ###
+```mermaid
+graph LR;
+  Instructions-->Plan_Assignment;
+  Instructions--Confused-->Ask_Questions;
+  Ask_Questions-->Instructions;
+  Plan_Assignment-->Plan_Section;
+  Plan_Section-->Designate_Time;
+  Designate_Time-->Complete;
+  Complete-->Review;
+  Review--Problem-->Plan_Section;
+  Review-->Peer_Review;
+  Peer_Review--Issues-->Plan_Section;
+  Peer_Review-->Finished;
+```
+
 1. Read through instructions, asking questions when needed.
 2. Plan out what needed to be done.
 3. Plan out what to do for each section of the assignment.
@@ -68,7 +83,7 @@ The actual questions are in
 6. Review work at the end.
 7. Ask friends and classmates to review worksheet to see if understandable.
 ### Level of Work ###
-- I feel like my work is above an A2 Level of work. I used multiple skills to a high level in each part of my assignment, i.e. part of my Javadoc used examples to show how the function worked, my markdown used a lot of extended syntax like footnotes and some custom styling added in it. The worksheet is engaging through humor and easy to understand. Its clarity and engagement would make it attractive to students.
+- I feel like my work is above an A2 Level of work. I used multiple skills to a high level in each part of my assignment, i.e. part of my Javadoc used examples to show how the function worked, my markdown used a lot of extended syntax like footnotes and some custom styling added in it. Additional features, such as mermaid diagrams were also used.The worksheet is engaging through humor and easy to understand. Its clarity and engagement would make it attractive to students.
 ### Usefulness ###
 - The use of examples, diagrams, and pseudocode enhances the overall understanding. The glossary and references add value by providing resources for deeper exploration. The footnotes make it easy to navigate to the glossary and search up definitions in the table. The questions at the end make the worksheet more engaging and reinforce the key concepts learnt.
 <STYLE>
